@@ -174,7 +174,7 @@ internal class Program
                         if (isEqual)
                         {
                             if (Password == password)
-                            { 
+                            {
                                 Console.WriteLine($"Добро пожаловать, {login}!");
                                 Thread.Sleep(2000);
                                 Console.Clear();
@@ -202,12 +202,14 @@ internal class Program
                         }
                         else
                         {
+                            continue;
+                        }
                             Console.WriteLine("Для входа в систему необходимо зарегистрироваться.");
 
                             Thread.Sleep(2000);
                             Console.Clear();
                             await Menu();
-                        }
+                        
                     }
                 }
 
@@ -913,7 +915,7 @@ internal class Program
 
 
 
-                    Console.WriteLine($"{columnName1,-10}\t{columnName2,-20}\t{columnName4,-10}\t{columnName5,-10}\t{columnName6,-10}\t{columnName3,-40}");
+                    Console.WriteLine($"{columnName1,-5}\t{columnName2,-30}\t{columnName4,-10}\t{columnName5,-10}\t{columnName6,-10}\t{columnName3,-40}");
 
 
                     while (await reader.ReadAsync())
@@ -929,7 +931,7 @@ internal class Program
 
 
 
-                        Console.WriteLine($"{ProductId,-9} \t{nameProduct,-20} \t{Price,-10} \t{CategoryId,-10} \t{Stock,-10} \t{DescriptionProduct,-40}");
+                        Console.WriteLine($"{ProductId,-5} \t{nameProduct,-30} \t{Price,-10} \t{CategoryId,-10} \t{Stock,-10} \t{DescriptionProduct,-40}");
                     }
                 }
 
